@@ -9,7 +9,7 @@ export function XLogoIcon({ size = 18, className }: XLogoIconProps) {
       <svg
         viewBox="0 0 300 271"
         preserveAspectRatio="xMidyMid meet"
-        className="dark:fill-white"
+        className="dark:fill-foreground"
         width={size}
         height={Math.round(size * 0.903333)}
         xmlns="http://www.w3.org/2000/svg"

@@ -11,7 +11,7 @@ import { XLogoIcon } from './icons/x-logo-icon'
 
 export function Header() {
   return (
-    <header className="py-3 sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-zinc-50 dark:bg-zinc-950 py-3 sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-0.5">
           <ChevronRight size={32} className="text-purple-400" />
@@ -19,7 +19,7 @@ export function Header() {
             <h1 className="font-mono text-lg font-semibold leading-none">
               Jefferson Felix
             </h1>
-            <span className="font-mono text-xs font-light text-slate-400 dark:text-slate-600">
+            <span className="font-mono text-xs font-light text-zinc-400 dark:text-zinc-600">
               Software Developer
             </span>
           </div>
