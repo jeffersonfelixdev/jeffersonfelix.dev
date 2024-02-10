@@ -1,5 +1,18 @@
+import { XLogoIcon } from '@/components/icons/x-logo-icon'
+import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import { Separator } from '@/components/ui/separator'
+import { readingTime } from '@/lib/utils'
+import { Copy, Share } from 'lucide-react'
 import { Metadata } from 'next'
 import showdown from 'showdown'
+import { InstagramLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 
 export const metadata: Metadata = {
   title: 'Create a Project with Next.js | Blog Jefferson Felix',
@@ -54,8 +67,6 @@ export default function AnArticle() {
   converter.setOption('requireSpaceBeforeHeadingText', true)
   converter.setOption('underline', true)
   const text = `
-# Creating a Project with Next.js
-
 ## Introduction
 
 Next.js is a powerful React framework that enables developers to build static,
@@ -174,6 +185,58 @@ advanced features and customization options.
 
   return (
     <main className="container">
+      <div className="mx-auto max-w-[900px]">
+        <h1 className="font-semibold text-3xl pt-10 pb-6">
+          Create a Project with Next.js
+        </h1>
+        <Separator />
+        <div className="flex items-center justify-between">
+          <div className="py-3">
+            <p>
+              <a
+                className="hover:text-accent-foreground"
+                href="https://jeffersonfelix.dev"
+              >
+                Jefferson Felix
+              </a>
+            </p>
+            <p className="text-zinc-500">
+              {readingTime(text)} min read &middot; Feb 10, 2024
+            </p>
+          </div>
+          <div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Share className="h-[1.2rem] w-[1.2rem]" />
+                  <span className="sr-only">Share</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="min-w-48" align="end">
+                <DropdownMenuItem className="p-3 flex gap-3">
+                  <Copy size={16} />
+                  Copy Link
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="p-3 flex gap-3">
+                  <XLogoIcon size={16} />
+                  Share on X
+                </DropdownMenuItem>
+                <DropdownMenuItem className="p-3 flex gap-3">
+                  <InstagramLogoIcon />
+                  Share on Instagram
+                </DropdownMenuItem>
+                <DropdownMenuItem className="p-3 flex gap-3">
+                  <LinkedInLogoIcon />
+                  Share on LinkedIn
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </div>
+
+        <Separator />
+      </div>
       <article
         className={`mx-auto prose prose-zinc prose-p:text-foreground 
                     prose-headings:text-foreground prose-li:text-foreground 
