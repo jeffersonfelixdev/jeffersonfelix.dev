@@ -3,7 +3,7 @@ interface XLogoIconProps {
   className?: string
 }
 
-export function XLogoIcon({ size = 19, className }: XLogoIconProps) {
+export function XLogoIcon({ size = 18, className }: XLogoIconProps) {
   return (
     <div className={className}>
       <svg
