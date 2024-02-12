@@ -11,8 +11,10 @@ import { Separator } from '@/components/ui/separator'
 import { readingTime } from '@/lib/utils'
 import { Copy, Share } from 'lucide-react'
 import { Metadata } from 'next'
-import showdown from 'showdown'
+import markdownIt from 'markdown-it'
+import Shiki from '@shikijs/markdown-it'
 import { InstagramLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Create a Project with Next.js | Blog Jefferson Felix',
@@ -54,18 +56,7 @@ export const metadata: Metadata = {
   category: 'Technology',
 }
 
-export default function AnArticle() {
-  const converter = new showdown.Converter()
-  converter.setOption('tables', true)
-  converter.setOption('strikethrough', true)
-  converter.setOption('tasklists', true)
-  converter.setOption('smoothLivePreview', true)
-  converter.setOption('simpleLineBreaks', false)
-  converter.setOption('openLinksInNewWindow', true)
-  converter.setOption('emoji', true)
-  converter.setOption('literalMidtage', true)
-  converter.setOption('requireSpaceBeforeHeadingText', true)
-  converter.setOption('underline', true)
+export default async function AnArticle() {
   const text = `
 ## Introduction
 
@@ -109,7 +100,7 @@ dependencies, and initializes a new Git repository.
 
 Navigate into your project directory and start the development server:
 
-\`\`\`
+\`\`\`bash
 cd my-next-project
 npm run dev
 \`\`\`
@@ -135,7 +126,7 @@ To create a new page, simply add a new file under the \`pages/\` directory. For
 example, creating \`about.js\` will automatically create a route /about. Here's 
 a simple example of what \`pages/about.js\` might look like:
 
-\`\`\`
+\`\`\`javascript
 import React from 'react';
 
 export default function About() {
@@ -155,7 +146,7 @@ reference them in your application using the root URL. For example, if you add
 an image \`logo.png\` to \`public/images/\`, you can display it in your 
 application like this:
 
-\`\`\`
+\`\`\`jsx
 <Image src="/images/logo.png" alt="Logo" width={500} height={500} />
 \`\`\`
 
@@ -181,7 +172,16 @@ with ease. Explore the [Next.js documentation](https://nextjs.org/docs) for more
 advanced features and customization options.
 
 `
-  const html = converter.makeHtml(text)
+  const md = markdownIt()
+  md.use(
+    await Shiki({
+      themes: {
+        light: 'catppuccin-mocha',
+        dark: 'catppuccin-mocha',
+      },
+    }),
+  )
+  const html = md.render(text)
 
   return (
     <main className="container">
@@ -245,6 +245,7 @@ advanced features and customization options.
       >
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
+      <Script src="http://localhost:3000/assets/js/copy-button.js" />
     </main>
   )
 }
