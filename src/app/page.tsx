@@ -4,7 +4,7 @@ export default function Home() {
       <h2 className="font-semibold text-lg">Hello, World!</h2>
       <ul className="p-4 flex flex-col gap-4 mb-4">
         <li> Javascript/Typescript engineer</li>
-        <li> Father of two boys 👶 👶 and pets 🐶 😺 </li>
+        <li> Father of two boys 👶 👶 and a cat 😺 </li>
         <li> Aviation enthusiast </li>
         <li> Fan of TV shows 📺 and movies 🎬 (and popcorn! 🍿)</li>
       </ul>
