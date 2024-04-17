@@ -27,7 +27,7 @@ export function Header() {
         <div className="flex items-center gap-1">
           <Link
             className="hidden sm:block"
-            href="https://instagram.com/jeffersonsfelix"
+            href="https://instagram.com/jeffersonfelix.dev"
             target="_blank"
           >
             <Button variant="ghost" size="icon">
@@ -48,7 +48,7 @@ export function Header() {
               <LinkedInLogoIcon className="h-[1.2rem] w-[1.2rem]" />
             </Button>
           </Link>
-          <Link href="https://github.com/jsfelix" target="_blank">
+          <Link href="https://github.com/jeffersonfelixdev" target="_blank">
             <Button variant="ghost" size="icon">
               <GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />
             </Button>
