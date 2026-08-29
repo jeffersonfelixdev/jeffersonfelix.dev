@@ -1,0 +1,30 @@
+# Jefferson Felix
+
+> Consultoria técnica e construção de produto digital para fundadores e times de produto. Duas frentes: destravar decisões de arquitetura caras demais para errar, e construir o produto do zero até produção.
+
+Site de uma página só, em português (pt-BR), em https://jeffersonfelix.dev/. Contato direto: contato@jeffersonfelix.dev. O ponto de entrada comercial é uma conversa de diagnóstico de 30 minutos, remota, agendada em https://calendly.com/contato-jeffersonfelix/30min.
+
+## Serviços
+
+- [Consultoria técnica e arquitetura](https://jeffersonfelix.dev/#servicos): para quando o sistema já existe e a próxima decisão é cara — reescrever ou refatorar, escalar ou simplificar, contratar ou reorganizar. Entrega revisão de arquitetura, stack e infraestrutura; mapa de riscos técnicos e dívida ordenado por custo de adiar; plano de evolução priorizado com trade-offs explícitos; e acompanhamento do time durante a execução.
+- [Produto digital do zero](https://jeffersonfelix.dev/#servicos): para quando a ideia já está validada e falta quem construa. Recorte do MVP, arquitetura e ambientes desde o primeiro dia, desenvolvimento ponta a ponta em ciclos curtos, deploy, monitoramento e handoff documentado.
+
+## Trabalhos
+
+- [ZapperHub](https://zapperhub.com): API de WhatsApp para integrar sistemas corporativos a conversas. Produto próprio — Founder & CTO, responsável por arquitetura, infraestrutura e decisões de produto.
+- [hubCSR](https://hubcsr.tech): plataforma de observabilidade institucional para empresas e OSCs (compliance, capacitação corporativa, evidência de execução). Papel: Tech Lead e arquiteto.
+- [CRMillion](https://crmillion.com.br): CRM para concessionárias de veículos. Papel: full stack.
+- [Meu Nascimento](https://meunascimento.com.br): sites de evento e listas de presente que convertem presentes em transferência bancária direta para a família. Papel: desenvolvedor sênior.
+- [Type Theory Forall](https://www.typetheoryforall.com): plataforma de um podcast sobre teoria de tipos e verificação formal. Desenvolvimento completo, do front ao deploy.
+- [Firval](https://firval.com.br): site institucional da Clínica Firval.
+
+## Processo
+
+- [Diagnóstico](https://jeffersonfelix.dev/#processo): 30 minutos de contexto sobre o sistema, o time e a decisão travada. Sem slide, sem discovery de três semanas.
+- [Escopo](https://jeffersonfelix.dev/#processo): recorte por escrito do que será feito, em qual formato e em qual prazo. Se o escopo não fecha, é dito antes de começar.
+- [Execução](https://jeffersonfelix.dev/#processo): ciclos curtos e visíveis, com código, decisões e ambiente acessíveis desde o primeiro dia.
+
+## Optional
+
+- [Agendar diagnóstico](https://calendly.com/contato-jeffersonfelix/30min): chamada 1:1 remota de 30 minutos, com tela compartilhada.
+- [Sitemap](https://jeffersonfelix.dev/sitemap.xml)
