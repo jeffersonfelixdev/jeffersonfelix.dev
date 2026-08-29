@@ -444,11 +444,21 @@
 
     .rule { border: 0; border-top: 1px solid var(--border); margin: 0; }
 
-    .social {
-      list-style: none; margin: 10px 0 0; padding: 0;
-      display: flex; justify-content: flex-end; gap: var(--gap-sm);
+    /* Rodape: cada link e um alvo de toque proprio. Minimo de 24x24px com
+       24px de espacamento entre alvos adjacentes (WCAG 2.2 - Target Size). */
+    .footlinks { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+    .footlinks > a {
+      display: inline-flex; align-items: center;
+      min-height: 32px; padding-block: 4px;
     }
-    .social a { display: inline-flex; align-items: center; gap: 6px; }
+    .social {
+      list-style: none; margin: 4px 0 0; padding: 0;
+      display: flex; justify-content: flex-end; gap: var(--gap-md);
+    }
+    .social a {
+      display: inline-flex; align-items: center; gap: 6px;
+      min-height: 32px; padding-block: 4px;
+    }
     .social svg { flex: none; }
 
     /* ─── reduced motion ────────────────────────────────────────────────
@@ -710,8 +720,8 @@
         <div class="logo" style="font-size: 16px; color: var(--fg); margin-bottom: 6px;"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>Jefferson Felix</div>
         <span>Consultoria técnica e construção de produto digital.</span>
       </div>
-      <div class="meta" style="text-align: right;">
-        <a href="mailto:contato@jeffersonfelix.dev">contato@jeffersonfelix.dev</a><br />
+      <div class="meta footlinks">
+        <a href="mailto:contato@jeffersonfelix.dev">contato@jeffersonfelix.dev</a>
         <a href="https://jeffersonfelix.dev" target="_blank" rel="noopener">jeffersonfelix.dev</a>
         <ul class="social">
           <li>
